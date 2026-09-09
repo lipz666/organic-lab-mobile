@@ -51,7 +51,18 @@
 **「没查」和「查了没有」是两回事。** 砌块不在库里只说明需要自行确认供应商，
 不等于买不到；索引加载失败时措辞里不会出现 ZINC。
 
-## 快速开始
+## 安装
+
+**Android**：从 [Releases](https://github.com/lipz666/organic-lab-mobile/releases)
+下载最新的 `.apk`（arm64，约 62MB），传到手机点开安装。系统提示「未知来源」时允许一次
+——这是自签名安装包的正常表现。
+
+装好后到「设置」填 Base URL、API Key 和模型名，点「测试连接并保存」。
+任何 OpenAI 兼容的接口都可以。
+
+**iOS** 目前需要自行构建，见 [docs/build.md](docs/build.md)。
+
+## 从源码运行
 
 ```bash
 npm install
@@ -64,9 +75,6 @@ npm run sync-skills && npm run build:ketcher
 ```bash
 npm run android   # 或 npm run ios / npm run web
 ```
-
-打开后到「设置」填 Base URL、API Key 和模型名，点「测试连接并保存」。
-任何 OpenAI 兼容的接口都可以。
 
 - **iOS** 需要完整版 Xcode
 - **Android** 需要 JDK 17 与 Android SDK，见 [docs/build.md](docs/build.md)

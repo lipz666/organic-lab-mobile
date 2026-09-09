@@ -112,3 +112,32 @@ find node_modules -maxdepth 4 -type d -name ".cxx" -exec rm -rf {} +
 
 **expo-router 的 typed routes 需要 Metro 跑一次**才会生成 `.expo/types/router.d.ts`。
 新增页面后 `tsc` 报路由类型错误，先 `npx expo start` 让它重新生成。
+
+## 发布新版本
+
+安装包走 **GitHub Releases**，不提交进仓库——APK 有 60MB+，进了 git 历史就永远留在
+那里，每发一版再压一份，所有克隆的人都要付这个代价。
+
+1. 改版本号，`app.json` 的 `expo.version` 和 `package.json` 的 `version` 要一致
+2. 跑发布脚本，它会先做检查再构建：
+
+```bash
+./scripts/release.sh
+```
+
+3. 确认输出里的签名证书是你自己的（不是 `CN=Android Debug`），然后：
+
+```bash
+gh release create v0.2.0 dist/OrganicLabMobile-0.2.0-arm64.apk --title "v0.2.0" --notes "..."
+```
+
+发布的包应该能由仓库里的源码构建出来——这是开源项目的基本要求，所以脚本从仓库自身
+构建，而不是从别处拷一个二进制上传。
+
+### versionCode
+
+Android 用 `versionCode`（整数）判断新旧，`versionName` 只是给人看的。
+本项目按 `major*10000 + minor*100 + patch` 由版本号推导，例如 0.2.0 → 200。
+
+漏改它的表现是用户装不上更新，且没有任何报错——所以 `release.sh` 会先校验它和
+版本号一致，不一致直接退出。
