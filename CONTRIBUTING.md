@@ -16,7 +16,7 @@ npx expo start
 不需要网络也能跑的检查：
 
 ```bash
-npm run verify:chem && npm run verify:bloom && npm run verify:context && npm run verify:photo
+npm run verify:chem && npm run verify:bloom && npm run verify:context && npm run verify:ui && npm run verify:photo
 ```
 
 需要模型端点的检查见 [README](README.md#验证)。

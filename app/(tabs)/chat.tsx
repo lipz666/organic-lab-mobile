@@ -44,6 +44,15 @@ type Item =
 let counter = 0;
 const nextKey = () => `item-${(counter += 1)}`;
 
+/** 一条回答里最多画几个结构。超过这个数量屏幕上就全是图，反而看不清。 */
+const MAX_STRUCTURES = 4;
+
+/** 从一段回答里取出要画的结构。生成时和重放历史时都走这里。 */
+function structuresFrom(text: string): Item | null {
+  const smiles = extractSmilesCandidates(text).slice(0, MAX_STRUCTURES);
+  return smiles.length > 0 ? { kind: "structures", key: nextKey(), smiles } : null;
+}
+
 /** 把落库的历史还原成气泡。工具结果只保留“调用过什么”，正文不回显——太长且对人无用。 */
 function historyToItems(history: ChatMessage[]): Item[] {
   const items: Item[] = [];
@@ -51,7 +60,13 @@ function historyToItems(history: ChatMessage[]): Item[] {
     if (message.role === "user") {
       items.push({ kind: "user", key: nextKey(), text: typeof message.content === "string" ? message.content : "" });
     } else if (message.role === "assistant") {
-      if (message.content) items.push({ kind: "assistant", key: nextKey(), text: message.content });
+      if (message.content) {
+        items.push({ kind: "assistant", key: nextKey(), text: message.content });
+        // 结构卡片在回答生成时是即时插入的；重放历史时要重新抽一遍，
+        // 否则重开会话结构图就凭空消失了。
+        const structures = structuresFrom(message.content);
+        if (structures) items.push(structures);
+      }
       for (const call of (message.tool_calls ?? []) as ToolCall[]) {
         items.push({ kind: "tool", key: nextKey(), name: call.function.name, status: "ok", summary: "" });
       }
@@ -136,9 +151,8 @@ export default function ChatScreen() {
             (withText[withText.length - 1]?.kind === "assistant"
               ? (withText[withText.length - 1] as { text: string }).text
               : "");
-          const smiles = extractSmilesCandidates(answer).slice(0, 4);
-          if (smiles.length === 0) return withText;
-          return [...withText, { kind: "structures", key: nextKey(), smiles }];
+          const structures = structuresFrom(answer);
+          return structures ? [...withText, structures] : withText;
         }
         case "error":
           streamingKey.current = null;

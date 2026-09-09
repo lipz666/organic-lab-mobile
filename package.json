@@ -59,7 +59,7 @@
     "verify:chem": "node --import tsx scripts/verify-chem.mts",
     "verify:retro": "node --env-file=.env.verify.local --import tsx scripts/verify-retro.mts",
     "verify:ui": "node --import tsx scripts/verify-ui.mts",
-    "verify": "npm run verify:chem && npm run verify:bloom && npm run verify:context && npm run verify:photo && npm run verify:provider && npm run verify:vision && npm run verify:loop && npm run verify:retro && npm run verify:rescue",
+    "verify": "npm run verify:chem && npm run verify:bloom && npm run verify:context && npm run verify:ui && npm run verify:photo && npm run verify:provider && npm run verify:vision && npm run verify:loop && npm run verify:retro && npm run verify:rescue",
     "verify:photo": "node --import tsx scripts/verify-photo.mts",
     "verify:rescue": "node --env-file=.env.verify.local --import tsx scripts/verify-rescue.mts",
     "build:blocks": "node --import tsx scripts/build-blocks.mts",

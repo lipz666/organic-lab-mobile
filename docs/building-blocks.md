@@ -5,7 +5,7 @@
 
 ## 两层设计
 
-**命名表**（`assets/chem/building-blocks.json`，345 条）负责**可读性**。
+**命名表**（`assets/chem/building-blocks.json`，286 条）负责**可读性**。
 命中时能显示「苯酚」而不只是一串 SMILES。SMILES 全部经 RDKit 校验。
 
 **ZINC 现货索引**（`assets/chem/bb-instock.bloom`，3.2 MB）负责**覆盖面**。
