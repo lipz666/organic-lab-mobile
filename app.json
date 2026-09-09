@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Organic Lab",
+    "slug": "organic-lab-mobile",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "org.organiclab.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "拍摄实验记录本和反应装置，用于生成实验记录草稿。照片只存在本机。",
+        "NSPhotoLibraryUsageDescription": "从相册选择实验记录照片，用于生成实验记录草稿。照片只存在本机。"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "org.organiclab.mobile",
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "从相册选择实验记录照片，用于生成实验记录草稿。照片只存在本机。",
+          "cameraPermission": "拍摄实验记录本和反应装置，用于生成实验记录草稿。照片只存在本机。"
+        }
+      ],
+      "expo-image",
+      "expo-asset",
+      "expo-font",
+      "./plugins/withKetcherAssetServer",
+      "./plugins/withReleaseSigning"
+    ],
+    "scheme": "organiclab",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

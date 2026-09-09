@@ -1,0 +1,1436 @@
+{
+  "note": "常见商业砌块精选表。命中说明这是目录级常备试剂；未命中只说明不在本表内，不等于买不到——需要自行查供应商。",
+  "version": "2026-09-05",
+  "blocks": [
+    {
+      "name": "苯",
+      "smiles": "c1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "甲苯",
+      "smiles": "Cc1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "苯甲醛",
+      "smiles": "O=Cc1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "苯乙酮",
+      "smiles": "CC(=O)c1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "二苯甲酮",
+      "smiles": "O=C(c1ccccc1)c1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "苯甲酸",
+      "smiles": "OC(=O)c1ccccc1",
+      "category": "acid"
+    },
+    {
+      "name": "苯甲酸甲酯",
+      "smiles": "COC(=O)c1ccccc1",
+      "category": "ester"
+    },
+    {
+      "name": "苯甲酰氯",
+      "smiles": "ClC(=O)c1ccccc1",
+      "category": "acyl halide"
+    },
+    {
+      "name": "苯酚",
+      "smiles": "Oc1ccccc1",
+      "category": "phenol"
+    },
+    {
+      "name": "苯胺",
+      "smiles": "Nc1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "苄醇",
+      "smiles": "OCc1ccccc1",
+      "category": "alcohol"
+    },
+    {
+      "name": "苄胺",
+      "smiles": "NCc1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "苄氯",
+      "smiles": "ClCc1ccccc1",
+      "category": "halide"
+    },
+    {
+      "name": "苄溴",
+      "smiles": "BrCc1ccccc1",
+      "category": "halide"
+    },
+    {
+      "name": "溴苯",
+      "smiles": "Brc1ccccc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "碘苯",
+      "smiles": "Ic1ccccc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "氯苯",
+      "smiles": "Clc1ccccc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴甲苯",
+      "smiles": "Cc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯甲醛",
+      "smiles": "O=Cc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯甲酸",
+      "smiles": "OC(=O)c1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯胺",
+      "smiles": "Nc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯酚",
+      "smiles": "Oc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯乙酮",
+      "smiles": "CC(=O)c1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴硝基苯",
+      "smiles": "O=[N+]([O-])c1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯甲腈",
+      "smiles": "N#Cc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-溴苯甲醚",
+      "smiles": "COc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "2-溴吡啶",
+      "smiles": "Brc1ccccn1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "3-溴吡啶",
+      "smiles": "Brc1cccnc1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2-氯吡啶",
+      "smiles": "Clc1ccccn1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2,6-二氯吡啶",
+      "smiles": "Clc1cccc(Cl)n1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2-氯嘧啶",
+      "smiles": "Clc1ncccn1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2,4-二氯嘧啶",
+      "smiles": "Clc1ccnc(Cl)n1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "5-溴嘧啶",
+      "smiles": "Brc1cncnc1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2-溴噻吩",
+      "smiles": "Brc1cccs1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "3-溴噻吩",
+      "smiles": "Brc1ccsc1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "2-溴呋喃",
+      "smiles": "Brc1ccco1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "5-溴吲哚",
+      "smiles": "Brc1ccc2[nH]ccc2c1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "4-溴-1H-吡唑",
+      "smiles": "Brc1cn[nH]c1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "苯硼酸",
+      "smiles": "OB(O)c1ccccc1",
+      "category": "boron"
+    },
+    {
+      "name": "4-甲基苯硼酸",
+      "smiles": "Cc1ccc(B(O)O)cc1",
+      "category": "boron"
+    },
+    {
+      "name": "4-甲氧基苯硼酸",
+      "smiles": "COc1ccc(B(O)O)cc1",
+      "category": "boron"
+    },
+    {
+      "name": "4-氟苯硼酸",
+      "smiles": "OB(O)c1ccc(F)cc1",
+      "category": "boron"
+    },
+    {
+      "name": "4-氯苯硼酸",
+      "smiles": "OB(O)c1ccc(Cl)cc1",
+      "category": "boron"
+    },
+    {
+      "name": "4-甲酰基苯硼酸",
+      "smiles": "O=Cc1ccc(B(O)O)cc1",
+      "category": "boron"
+    },
+    {
+      "name": "3-吡啶硼酸",
+      "smiles": "OB(O)c1cccnc1",
+      "category": "boron"
+    },
+    {
+      "name": "噻吩-2-硼酸",
+      "smiles": "OB(O)c1cccs1",
+      "category": "boron"
+    },
+    {
+      "name": "联硼酸频那醇酯 B2pin2",
+      "smiles": "CC1(C)OB(OC1(C)C)B1OC(C)(C)C(C)(C)O1",
+      "category": "boron"
+    },
+    {
+      "name": "苯硼酸频那醇酯",
+      "smiles": "CC1(C)OB(c2ccccc2)OC1(C)C",
+      "category": "boron"
+    },
+    {
+      "name": "甲醇",
+      "smiles": "CO",
+      "category": "solvent/alcohol"
+    },
+    {
+      "name": "乙醇",
+      "smiles": "CCO",
+      "category": "solvent/alcohol"
+    },
+    {
+      "name": "异丙醇",
+      "smiles": "CC(C)O",
+      "category": "solvent/alcohol"
+    },
+    {
+      "name": "叔丁醇",
+      "smiles": "CC(C)(C)O",
+      "category": "alcohol"
+    },
+    {
+      "name": "乙二醇",
+      "smiles": "OCCO",
+      "category": "alcohol"
+    },
+    {
+      "name": "丙酮",
+      "smiles": "CC(C)=O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "乙醛",
+      "smiles": "CC=O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "多聚甲醛/甲醛",
+      "smiles": "C=O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "乙酸",
+      "smiles": "CC(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "乙酸酐",
+      "smiles": "CC(=O)OC(C)=O",
+      "category": "acylating"
+    },
+    {
+      "name": "乙酰氯",
+      "smiles": "CC(=O)Cl",
+      "category": "acyl halide"
+    },
+    {
+      "name": "乙酸乙酯",
+      "smiles": "CCOC(C)=O",
+      "category": "ester"
+    },
+    {
+      "name": "丙烯酸甲酯",
+      "smiles": "COC(=O)C=C",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "丙烯酸乙酯",
+      "smiles": "CCOC(=O)C=C",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "丙烯腈",
+      "smiles": "C=CC#N",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "甲基乙烯基酮",
+      "smiles": "CC(=O)C=C",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "丙二酸二乙酯",
+      "smiles": "CCOC(=O)CC(=O)OCC",
+      "category": "1,3-dicarbonyl"
+    },
+    {
+      "name": "乙酰乙酸乙酯",
+      "smiles": "CCOC(=O)CC(C)=O",
+      "category": "1,3-dicarbonyl"
+    },
+    {
+      "name": "乙酰丙酮",
+      "smiles": "CC(=O)CC(C)=O",
+      "category": "1,3-dicarbonyl"
+    },
+    {
+      "name": "丙二腈",
+      "smiles": "N#CCC#N",
+      "category": "1,3-dicarbonyl"
+    },
+    {
+      "name": "碘甲烷",
+      "smiles": "CI",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "溴乙烷",
+      "smiles": "CCBr",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "1-溴丁烷",
+      "smiles": "CCCCBr",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "1,2-二溴乙烷",
+      "smiles": "BrCCBr",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "1,3-二溴丙烷",
+      "smiles": "BrCCCBr",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "溴乙酸乙酯",
+      "smiles": "CCOC(=O)CBr",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "氯乙酰氯",
+      "smiles": "ClCC(=O)Cl",
+      "category": "acyl halide"
+    },
+    {
+      "name": "环己酮",
+      "smiles": "O=C1CCCCC1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "环戊酮",
+      "smiles": "O=C1CCCC1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "环己烯酮",
+      "smiles": "O=C1CCCC=C1",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "环己烷",
+      "smiles": "C1CCCCC1",
+      "category": "alkane"
+    },
+    {
+      "name": "环己醇",
+      "smiles": "OC1CCCCC1",
+      "category": "alcohol"
+    },
+    {
+      "name": "环丙胺",
+      "smiles": "NC1CC1",
+      "category": "amine"
+    },
+    {
+      "name": "环丙基溴",
+      "smiles": "BrC1CC1",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "吗啉",
+      "smiles": "C1COCCN1",
+      "category": "amine"
+    },
+    {
+      "name": "哌啶",
+      "smiles": "C1CCNCC1",
+      "category": "amine"
+    },
+    {
+      "name": "哌嗪",
+      "smiles": "C1CNCCN1",
+      "category": "amine"
+    },
+    {
+      "name": "N-Boc-哌嗪",
+      "smiles": "CC(C)(C)OC(=O)N1CCNCC1",
+      "category": "amine"
+    },
+    {
+      "name": "吡咯烷",
+      "smiles": "C1CCNC1",
+      "category": "amine"
+    },
+    {
+      "name": "二乙胺",
+      "smiles": "CCNCC",
+      "category": "amine"
+    },
+    {
+      "name": "三乙胺",
+      "smiles": "CCN(CC)CC",
+      "category": "base"
+    },
+    {
+      "name": "二异丙基乙胺 DIPEA",
+      "smiles": "CCN(C(C)C)C(C)C",
+      "category": "base"
+    },
+    {
+      "name": "吡啶",
+      "smiles": "c1ccncc1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "DMAP",
+      "smiles": "CN(C)c1ccncc1",
+      "category": "catalyst"
+    },
+    {
+      "name": "咪唑",
+      "smiles": "c1c[nH]cn1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "吡唑",
+      "smiles": "c1cc[nH]n1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "1-甲基吡唑",
+      "smiles": "Cn1cccn1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "噻唑",
+      "smiles": "c1cscn1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "噁唑",
+      "smiles": "c1cocn1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "吲哚",
+      "smiles": "c1ccc2[nH]ccc2c1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "喹啉",
+      "smiles": "c1ccc2ncccc2c1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "嘧啶",
+      "smiles": "c1cncnc1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "呋喃",
+      "smiles": "c1ccoc1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "噻吩",
+      "smiles": "c1ccsc1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "苯并噻唑",
+      "smiles": "c1ccc2scnc2c1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "苯并咪唑",
+      "smiles": "c1ccc2[nH]cnc2c1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "甘氨酸",
+      "smiles": "NCC(=O)O",
+      "category": "amino acid"
+    },
+    {
+      "name": "L-丙氨酸",
+      "smiles": "C[C@H](N)C(=O)O",
+      "category": "amino acid"
+    },
+    {
+      "name": "L-脯氨酸",
+      "smiles": "OC(=O)[C@@H]1CCCN1",
+      "category": "amino acid"
+    },
+    {
+      "name": "L-苯丙氨酸",
+      "smiles": "N[C@@H](Cc1ccccc1)C(=O)O",
+      "category": "amino acid"
+    },
+    {
+      "name": "L-缬氨酸",
+      "smiles": "CC(C)[C@H](N)C(=O)O",
+      "category": "amino acid"
+    },
+    {
+      "name": "Boc酸酐 Boc2O",
+      "smiles": "CC(C)(C)OC(=O)OC(=O)OC(C)(C)C",
+      "category": "protecting"
+    },
+    {
+      "name": "氯甲酸苄酯 Cbz-Cl",
+      "smiles": "ClC(=O)OCc1ccccc1",
+      "category": "protecting"
+    },
+    {
+      "name": "TBSCl",
+      "smiles": "CC(C)(C)[Si](C)(C)Cl",
+      "category": "protecting"
+    },
+    {
+      "name": "对甲苯磺酰氯 TsCl",
+      "smiles": "Cc1ccc(cc1)S(=O)(=O)Cl",
+      "category": "sulfonyl"
+    },
+    {
+      "name": "甲磺酰氯 MsCl",
+      "smiles": "CS(=O)(=O)Cl",
+      "category": "sulfonyl"
+    },
+    {
+      "name": "对甲苯磺酸 TsOH",
+      "smiles": "Cc1ccc(cc1)S(=O)(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "三氟乙酸",
+      "smiles": "OC(=O)C(F)(F)F",
+      "category": "acid"
+    },
+    {
+      "name": "三氟甲磺酸酐",
+      "smiles": "O=S(=O)(OS(=O)(=O)C(F)(F)F)C(F)(F)F",
+      "category": "sulfonyl"
+    },
+    {
+      "name": "硼氢化钠",
+      "smiles": "[BH4-].[Na+]",
+      "category": "reductant"
+    },
+    {
+      "name": "三乙酰氧基硼氢化钠",
+      "smiles": "CC(=O)O[BH-](OC(C)=O)OC(C)=O.[Na+]",
+      "category": "reductant"
+    },
+    {
+      "name": "氰基硼氢化钠",
+      "smiles": "[Na+].[C-]#N.[BH3]",
+      "category": "reductant"
+    },
+    {
+      "name": "碳酸钾",
+      "smiles": "[K+].[K+].[O-]C([O-])=O",
+      "category": "base"
+    },
+    {
+      "name": "碳酸铯",
+      "smiles": "[Cs+].[Cs+].[O-]C([O-])=O",
+      "category": "base"
+    },
+    {
+      "name": "叔丁醇钾",
+      "smiles": "CC(C)(C)[O-].[K+]",
+      "category": "base"
+    },
+    {
+      "name": "氢化钠",
+      "smiles": "[H-].[Na+]",
+      "category": "base"
+    },
+    {
+      "name": "苯乙烯",
+      "smiles": "C=Cc1ccccc1",
+      "category": "alkene"
+    },
+    {
+      "name": "苯乙炔",
+      "smiles": "C#Cc1ccccc1",
+      "category": "alkyne"
+    },
+    {
+      "name": "三甲基硅乙炔",
+      "smiles": "C[Si](C)(C)C#C",
+      "category": "alkyne"
+    },
+    {
+      "name": "烯丙基溴",
+      "smiles": "BrCC=C",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "丙炔溴",
+      "smiles": "BrCC#C",
+      "category": "alkyl halide"
+    },
+    {
+      "name": "对苯二酚",
+      "smiles": "Oc1ccc(O)cc1",
+      "category": "phenol"
+    },
+    {
+      "name": "间苯二酚",
+      "smiles": "Oc1cccc(O)c1",
+      "category": "phenol"
+    },
+    {
+      "name": "邻苯二胺",
+      "smiles": "Nc1ccccc1N",
+      "category": "amine"
+    },
+    {
+      "name": "对苯二胺",
+      "smiles": "Nc1ccc(N)cc1",
+      "category": "amine"
+    },
+    {
+      "name": "水杨醛",
+      "smiles": "O=Cc1ccccc1O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "邻苯二甲酸酐",
+      "smiles": "O=C1OC(=O)c2ccccc12",
+      "category": "anhydride"
+    },
+    {
+      "name": "马来酸酐",
+      "smiles": "O=C1OC(=O)C=C1",
+      "category": "anhydride"
+    },
+    {
+      "name": "尿素",
+      "smiles": "NC(N)=O",
+      "category": "misc"
+    },
+    {
+      "name": "硫脲",
+      "smiles": "NC(N)=S",
+      "category": "misc"
+    },
+    {
+      "name": "肼",
+      "smiles": "NN",
+      "category": "misc"
+    },
+    {
+      "name": "羟胺",
+      "smiles": "NO",
+      "category": "misc"
+    },
+    {
+      "name": "叠氮化钠",
+      "smiles": "[N-]=[N+]=[N-].[Na+]",
+      "category": "misc"
+    },
+    {
+      "name": "氰化钠",
+      "smiles": "[C-]#N.[Na+]",
+      "category": "misc"
+    },
+    {
+      "name": "硝基甲烷",
+      "smiles": "C[N+](=O)[O-]",
+      "category": "misc"
+    },
+    {
+      "name": "2-氨基吡啶",
+      "smiles": "Nc1ccccn1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "4-氨基吡啶",
+      "smiles": "Nc1ccncc1",
+      "category": "heteroarene"
+    },
+    {
+      "name": "烟酸",
+      "smiles": "OC(=O)c1cccnc1",
+      "category": "heteroaryl acid"
+    },
+    {
+      "name": "异烟酸",
+      "smiles": "OC(=O)c1ccncc1",
+      "category": "heteroaryl acid"
+    },
+    {
+      "name": "吡啶-2-甲醛",
+      "smiles": "O=Cc1ccccn1",
+      "category": "heteroaryl carbonyl"
+    },
+    {
+      "name": "噻吩-2-甲醛",
+      "smiles": "O=Cc1cccs1",
+      "category": "heteroaryl carbonyl"
+    },
+    {
+      "name": "糠醛",
+      "smiles": "O=Cc1ccco1",
+      "category": "heteroaryl carbonyl"
+    },
+    {
+      "name": "4-硝基苯甲醛",
+      "smiles": "O=Cc1ccc(cc1)[N+](=O)[O-]",
+      "category": "carbonyl"
+    },
+    {
+      "name": "4-甲氧基苯甲醛",
+      "smiles": "COc1ccc(C=O)cc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "肉桂醛",
+      "smiles": "O=CC=Cc1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "查尔酮",
+      "smiles": "O=C(C=Cc1ccccc1)c1ccccc1",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "苯乙酸",
+      "smiles": "OC(=O)Cc1ccccc1",
+      "category": "acid"
+    },
+    {
+      "name": "苯丙酸",
+      "smiles": "OC(=O)CCc1ccccc1",
+      "category": "acid"
+    },
+    {
+      "name": "丙酸",
+      "smiles": "CCC(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "丁酸",
+      "smiles": "CCCC(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "草酰氯",
+      "smiles": "ClC(=O)C(=O)Cl",
+      "category": "acyl halide"
+    },
+    {
+      "name": "异丁基氯甲酸酯",
+      "smiles": "CC(C)COC(=O)Cl",
+      "category": "activating"
+    },
+    {
+      "name": "EDCI",
+      "smiles": "CCN=C=NCCCN(C)C",
+      "category": "coupling"
+    },
+    {
+      "name": "DCC",
+      "smiles": "C1CCC(CC1)N=C=NC1CCCCC1",
+      "category": "coupling"
+    },
+    {
+      "name": "HATU",
+      "smiles": "CN(C)C(On1nnc2ccccc21)=[N+](C)C.F[P-](F)(F)(F)(F)F",
+      "category": "coupling"
+    },
+    {
+      "name": "HOBt",
+      "smiles": "On1nnc2ccccc21",
+      "category": "coupling"
+    },
+    {
+      "name": "四氢呋喃",
+      "smiles": "C1CCOC1",
+      "category": "solvent"
+    },
+    {
+      "name": "二氯甲烷",
+      "smiles": "ClCCl",
+      "category": "solvent"
+    },
+    {
+      "name": "乙腈",
+      "smiles": "CC#N",
+      "category": "solvent"
+    },
+    {
+      "name": "DMF",
+      "smiles": "CN(C)C=O",
+      "category": "solvent"
+    },
+    {
+      "name": "DMSO",
+      "smiles": "CS(C)=O",
+      "category": "solvent"
+    },
+    {
+      "name": "1,4-二氧六环",
+      "smiles": "C1COCCO1",
+      "category": "solvent"
+    },
+    {
+      "name": "甲苯磺酸甲酯",
+      "smiles": "COS(=O)(=O)c1ccc(C)cc1",
+      "category": "alkylating"
+    },
+    {
+      "name": "硫酸二甲酯",
+      "smiles": "COS(=O)(=O)OC",
+      "category": "alkylating"
+    },
+    {
+      "name": "4-氟硝基苯",
+      "smiles": "O=[N+]([O-])c1ccc(F)cc1",
+      "category": "SNAr"
+    },
+    {
+      "name": "2-氟硝基苯",
+      "smiles": "O=[N+]([O-])c1ccccc1F",
+      "category": "SNAr"
+    },
+    {
+      "name": "2,4-二氟硝基苯",
+      "smiles": "O=[N+]([O-])c1ccc(F)cc1F",
+      "category": "SNAr"
+    },
+    {
+      "name": "4-氯-3-硝基吡啶",
+      "smiles": "O=[N+]([O-])c1cnccc1Cl",
+      "category": "SNAr"
+    },
+    {
+      "name": "2-氯-5-硝基吡啶",
+      "smiles": "O=[N+]([O-])c1ccc(Cl)nc1",
+      "category": "SNAr"
+    },
+    {
+      "name": "4-氯喹啉",
+      "smiles": "Clc1ccnc2ccccc12",
+      "category": "SNAr"
+    },
+    {
+      "name": "2,4-二氯喹唑啉",
+      "smiles": "Clc1nc(Cl)c2ccccc2n1",
+      "category": "SNAr"
+    },
+    {
+      "name": "6-溴喹啉",
+      "smiles": "Brc1ccc2ncccc2c1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "5-溴-2-氯吡啶",
+      "smiles": "Clc1ccc(Br)cn1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "3-溴-5-氯吡啶",
+      "smiles": "Clc1cncc(Br)c1",
+      "category": "heteroaryl halide"
+    },
+    {
+      "name": "1,4-二溴苯",
+      "smiles": "Brc1ccc(Br)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "1,3-二溴苯",
+      "smiles": "Brc1cccc(Br)c1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-碘苯甲醚",
+      "smiles": "COc1ccc(I)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "4-碘苯甲酸",
+      "smiles": "OC(=O)c1ccc(I)cc1",
+      "category": "aryl halide"
+    },
+    {
+      "name": "苯肼",
+      "smiles": "NNc1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "N-甲基苯胺",
+      "smiles": "CNc1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "N,N-二甲基苯胺",
+      "smiles": "CN(C)c1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "苯甲酰胺",
+      "smiles": "NC(=O)c1ccccc1",
+      "category": "amide"
+    },
+    {
+      "name": "苯甲腈",
+      "smiles": "N#Cc1ccccc1",
+      "category": "nitrile"
+    },
+    {
+      "name": "硝基苯",
+      "smiles": "O=[N+]([O-])c1ccccc1",
+      "category": "nitro"
+    },
+    {
+      "name": "苯甲醇钠/苄氧基",
+      "smiles": "[O-]Cc1ccccc1.[Na+]",
+      "category": "misc"
+    },
+    {
+      "name": "4-羟基苯甲醛",
+      "smiles": "O=Cc1ccc(O)cc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "3,4-二甲氧基苯甲醛",
+      "smiles": "COc1ccc(C=O)cc1OC",
+      "category": "carbonyl"
+    },
+    {
+      "name": "香草醛",
+      "smiles": "COc1cc(C=O)ccc1O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "苯乙醛",
+      "smiles": "O=CCc1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "苯丙酮",
+      "smiles": "CCC(=O)c1ccccc1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "4-哌啶酮",
+      "smiles": "O=C1CCNCC1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "N-Boc-4-哌啶酮",
+      "smiles": "CC(C)(C)OC(=O)N1CCC(=O)CC1",
+      "category": "carbonyl"
+    },
+    {
+      "name": "N-Boc-哌啶-4-甲酸",
+      "smiles": "CC(C)(C)OC(=O)N1CCC(CC1)C(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "N-Boc-乙二胺",
+      "smiles": "CC(C)(C)OC(=O)NCCN",
+      "category": "amine"
+    },
+    {
+      "name": "乙二胺",
+      "smiles": "NCCN",
+      "category": "amine"
+    },
+    {
+      "name": "1,3-丙二胺",
+      "smiles": "NCCCN",
+      "category": "amine"
+    },
+    {
+      "name": "甲胺",
+      "smiles": "CN",
+      "category": "amine"
+    },
+    {
+      "name": "二甲胺",
+      "smiles": "CNC",
+      "category": "amine"
+    },
+    {
+      "name": "氨",
+      "smiles": "N",
+      "category": "amine"
+    },
+    {
+      "name": "苯磺酰氯",
+      "smiles": "O=S(=O)(Cl)c1ccccc1",
+      "category": "sulfonyl"
+    },
+    {
+      "name": "苯硫酚",
+      "smiles": "Sc1ccccc1",
+      "category": "thiol"
+    },
+    {
+      "name": "乙硫醇",
+      "smiles": "CCS",
+      "category": "thiol"
+    },
+    {
+      "name": "巯基乙酸",
+      "smiles": "OC(=O)CS",
+      "category": "thiol"
+    },
+    {
+      "name": "间氯过氧苯甲酸 mCPBA",
+      "smiles": "OOC(=O)c1cccc(Cl)c1",
+      "category": "oxidant"
+    },
+    {
+      "name": "戴斯-马丁试剂 DMP",
+      "smiles": "CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21",
+      "category": "oxidant"
+    },
+    {
+      "name": "N-溴代丁二酰亚胺 NBS",
+      "smiles": "BrN1C(=O)CCC1=O",
+      "category": "halogenating"
+    },
+    {
+      "name": "N-氯代丁二酰亚胺 NCS",
+      "smiles": "ClN1C(=O)CCC1=O",
+      "category": "halogenating"
+    },
+    {
+      "name": "N-碘代丁二酰亚胺 NIS",
+      "smiles": "IN1C(=O)CCC1=O",
+      "category": "halogenating"
+    },
+    {
+      "name": "四氯苯醌 / DDQ",
+      "smiles": "N#Cc1c(Cl)c(=O)c(C#N)c(Cl)c1=O",
+      "category": "oxidant"
+    },
+    {
+      "name": "4CzIPN",
+      "smiles": "N#Cc1c(-n2c3ccccc3c3ccccc32)c(-n2c3ccccc3c3ccccc32)c(C#N)c(-n2c3ccccc3c3ccccc32)c1-n1c2ccccc2c2ccccc21",
+      "category": "photocatalyst"
+    },
+    {
+      "name": "Mes-Acr+ (9-均三甲苯基吖啶鎓)",
+      "smiles": "C[n+]1c2ccccc2c(-c2c(C)cc(C)cc2C)c2ccccc21",
+      "category": "photocatalyst"
+    },
+    {
+      "name": "曙红Y",
+      "smiles": "[O-]C(=O)c1ccccc1C1=C2C=C(Br)C(=O)C(Br)=C2Oc2c(Br)c([O-])c(Br)cc21",
+      "category": "photocatalyst"
+    },
+    {
+      "name": "玫瑰红 Rose Bengal",
+      "smiles": "[O-]C(=O)c1c(Cl)c(Cl)c(Cl)c(Cl)c1C1=C2C=C(I)C(=O)C(I)=C2Oc2c(I)c([O-])c(I)cc21",
+      "category": "photocatalyst"
+    },
+    {
+      "name": "二苯基膦",
+      "smiles": "Pc1ccccc1",
+      "category": "phosphine"
+    },
+    {
+      "name": "三苯基膦",
+      "smiles": "c1ccc(cc1)P(c1ccccc1)c1ccccc1",
+      "category": "phosphine"
+    },
+    {
+      "name": "偶氮二甲酸二异丙酯 DIAD",
+      "smiles": "CC(C)OC(=O)N=NC(=O)OC(C)C",
+      "category": "Mitsunobu"
+    },
+    {
+      "name": "苯基三氟硼酸钾",
+      "smiles": "[K+].[B-](F)(F)(F)c1ccccc1",
+      "category": "boron"
+    },
+    {
+      "name": "碘化亚铜",
+      "smiles": "[Cu]I",
+      "category": "catalyst"
+    },
+    {
+      "name": "醋酸钯",
+      "smiles": "CC(=O)O[Pd]OC(C)=O",
+      "category": "catalyst"
+    },
+    {
+      "name": "异丁基苯",
+      "smiles": "CC(C)Cc1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "乙苯",
+      "smiles": "CCc1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "二甲苯（对）",
+      "smiles": "Cc1ccc(C)cc1",
+      "category": "arene"
+    },
+    {
+      "name": "萘",
+      "smiles": "c1ccc2ccccc2c1",
+      "category": "arene"
+    },
+    {
+      "name": "联苯",
+      "smiles": "c1ccc(cc1)-c1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "苯甲醚",
+      "smiles": "COc1ccccc1",
+      "category": "arene"
+    },
+    {
+      "name": "水",
+      "smiles": "O",
+      "category": "feedstock"
+    },
+    {
+      "name": "一氧化碳",
+      "smiles": "[C-]#[O+]",
+      "category": "feedstock"
+    },
+    {
+      "name": "氢气",
+      "smiles": "[HH]",
+      "category": "feedstock"
+    },
+    {
+      "name": "氧气",
+      "smiles": "O=O",
+      "category": "feedstock"
+    },
+    {
+      "name": "二氧化碳",
+      "smiles": "O=C=O",
+      "category": "feedstock"
+    },
+    {
+      "name": "盐酸",
+      "smiles": "Cl",
+      "category": "feedstock"
+    },
+    {
+      "name": "氢溴酸",
+      "smiles": "Br",
+      "category": "feedstock"
+    },
+    {
+      "name": "硫酸",
+      "smiles": "OS(=O)(=O)O",
+      "category": "feedstock"
+    },
+    {
+      "name": "硝酸",
+      "smiles": "O[N+](=O)[O-]",
+      "category": "feedstock"
+    },
+    {
+      "name": "甲酸",
+      "smiles": "OC=O",
+      "category": "acid"
+    },
+    {
+      "name": "乙烯",
+      "smiles": "C=C",
+      "category": "feedstock"
+    },
+    {
+      "name": "丙烯",
+      "smiles": "CC=C",
+      "category": "feedstock"
+    },
+    {
+      "name": "乙炔",
+      "smiles": "C#C",
+      "category": "feedstock"
+    },
+    {
+      "name": "丁二烯",
+      "smiles": "C=CC=C",
+      "category": "feedstock"
+    },
+    {
+      "name": "环戊二烯",
+      "smiles": "C1C=CC=C1",
+      "category": "diene"
+    },
+    {
+      "name": "丙烯酸",
+      "smiles": "OC(=O)C=C",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "巴豆醛",
+      "smiles": "CC=CC=O",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "甲基丙烯酸甲酯",
+      "smiles": "COC(=O)C(C)=C",
+      "category": "Michael acceptor"
+    },
+    {
+      "name": "丁酮",
+      "smiles": "CCC(C)=O",
+      "category": "carbonyl"
+    },
+    {
+      "name": "异丙醇铝/异丙醇钠",
+      "smiles": "CC(C)[O-].[Na+]",
+      "category": "base"
+    },
+    {
+      "name": "乙醇钠",
+      "smiles": "CC[O-].[Na+]",
+      "category": "base"
+    },
+    {
+      "name": "氢氧化钠",
+      "smiles": "[OH-].[Na+]",
+      "category": "base"
+    },
+    {
+      "name": "氢氧化钾",
+      "smiles": "[OH-].[K+]",
+      "category": "base"
+    },
+    {
+      "name": "碳酸钠",
+      "smiles": "[Na+].[Na+].[O-]C([O-])=O",
+      "category": "base"
+    },
+    {
+      "name": "碳酸氢钠",
+      "smiles": "[Na+].OC([O-])=O",
+      "category": "base"
+    },
+    {
+      "name": "氯化亚砜",
+      "smiles": "O=S(Cl)Cl",
+      "category": "activating"
+    },
+    {
+      "name": "三氯氧磷",
+      "smiles": "O=P(Cl)(Cl)Cl",
+      "category": "activating"
+    },
+    {
+      "name": "三溴化磷",
+      "smiles": "BrP(Br)Br",
+      "category": "activating"
+    },
+    {
+      "name": "氯化铝",
+      "smiles": "Cl[Al](Cl)Cl",
+      "category": "Lewis acid"
+    },
+    {
+      "name": "三氟化硼乙醚",
+      "smiles": "CCOCC.FB(F)F",
+      "category": "Lewis acid"
+    },
+    {
+      "name": "氯化锌",
+      "smiles": "Cl[Zn]Cl",
+      "category": "Lewis acid"
+    },
+    {
+      "name": "四氯化钛",
+      "smiles": "Cl[Ti](Cl)(Cl)Cl",
+      "category": "Lewis acid"
+    },
+    {
+      "name": "溴化苯镁（格氏）",
+      "smiles": "Br[Mg]c1ccccc1",
+      "category": "organometallic"
+    },
+    {
+      "name": "甲基溴化镁",
+      "smiles": "C[Mg]Br",
+      "category": "organometallic"
+    },
+    {
+      "name": "正丁基锂",
+      "smiles": "CCCC[Li]",
+      "category": "organometallic"
+    },
+    {
+      "name": "LDA",
+      "smiles": "CC(C)[N-]C(C)C.[Li+]",
+      "category": "base"
+    },
+    {
+      "name": "LiHMDS",
+      "smiles": "C[Si](C)(C)[N-][Si](C)(C)C.[Li+]",
+      "category": "base"
+    },
+    {
+      "name": "四氢铝锂",
+      "smiles": "[AlH4-].[Li+]",
+      "category": "reductant"
+    },
+    {
+      "name": "DIBAL-H",
+      "smiles": "CC(C)C[AlH]CC(C)C",
+      "category": "reductant"
+    },
+    {
+      "name": "硼烷四氢呋喃",
+      "smiles": "B.C1CCOC1",
+      "category": "reductant"
+    },
+    {
+      "name": "重铬酸吡啶盐 PCC",
+      "smiles": "[O-][Cr](=O)(=O)Cl.c1cc[nH+]cc1",
+      "category": "oxidant"
+    },
+    {
+      "name": "高锰酸钾",
+      "smiles": "[O-][Mn](=O)(=O)=O.[K+]",
+      "category": "oxidant"
+    },
+    {
+      "name": "过氧化氢",
+      "smiles": "OO",
+      "category": "oxidant"
+    },
+    {
+      "name": "苯甲酸乙酯",
+      "smiles": "CCOC(=O)c1ccccc1",
+      "category": "ester"
+    },
+    {
+      "name": "对氨基苯甲酸",
+      "smiles": "Nc1ccc(cc1)C(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "邻氨基苯甲酸",
+      "smiles": "Nc1ccccc1C(=O)O",
+      "category": "acid"
+    },
+    {
+      "name": "水杨酸",
+      "smiles": "OC(=O)c1ccccc1O",
+      "category": "acid"
+    },
+    {
+      "name": "对甲苯胺",
+      "smiles": "Cc1ccc(N)cc1",
+      "category": "amine"
+    },
+    {
+      "name": "对氯苯胺",
+      "smiles": "Nc1ccc(Cl)cc1",
+      "category": "amine"
+    },
+    {
+      "name": "对甲氧基苯胺",
+      "smiles": "COc1ccc(N)cc1",
+      "category": "amine"
+    },
+    {
+      "name": "苯乙胺",
+      "smiles": "NCCc1ccccc1",
+      "category": "amine"
+    },
+    {
+      "name": "环己胺",
+      "smiles": "NC1CCCCC1",
+      "category": "amine"
+    },
+    {
+      "name": "正丁胺",
+      "smiles": "CCCCN",
+      "category": "amine"
+    }
+  ]
+}

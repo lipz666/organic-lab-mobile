@@ -1,0 +1,43 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #faf9f5;
+}
+
+html,
+body,
+#root,
+#root > div {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #faf9f5;
+}
+
+/* Ketcher is desktop-first. Keep the chemistry canvas large and make its
+   controls finger-sized without changing the editor's internal coordinates. */
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+@media (max-width: 520px) {
+  [class*="TopToolbar"] button,
+  [class*="LeftToolbar"] button,
+  [class*="RightToolbar"] button,
+  [class*="BottomToolbar"] button {
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+
+  [class*="App-module_top"] {
+    overflow-x: auto !important;
+    scrollbar-width: none;
+  }
+
+  [class*="App-module_top"]::-webkit-scrollbar {
+    display: none;
+  }
+}

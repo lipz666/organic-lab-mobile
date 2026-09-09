@@ -1,0 +1,53 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
+
+# RDKit MinimalLib：装依赖时由 scripts/sync-rdkit.mjs 复制，不入库
+/assets/rdkit/
+
+# 发布签名密钥，绝不入库
+/credentials/
+
+# 打好的 APK 不入库
+/dist/
+
+# Ketcher 打包产物：由 npm run build:ketcher 从 ketcher-web/ 生成，不入库
+/assets/ketcher/

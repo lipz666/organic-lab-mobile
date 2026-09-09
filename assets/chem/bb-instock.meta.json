@@ -1,0 +1,10 @@
+{
+  "source": "ZINC20 bb_instock (files.docking.org/bb/current)",
+  "builtAt": "2026-09-05",
+  "entries": 1954442,
+  "skipped": 7,
+  "m": 27163275,
+  "k": 9,
+  "estimatedFalsePositiveRate": 0.00127,
+  "bytes": 3395410
+}

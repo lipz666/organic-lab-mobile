@@ -1,0 +1,205 @@
+/**
+ * RDKit 操作的唯一实现。
+ *
+ * 这是一个**普通 JS 文件**，不是 TypeScript，也不参与打包成 bundle。原因是它必须
+ * 在两个地方原样运行：WebView（app 里 RDKit 真正执行的地方）和 node（跑测试的地方）。
+ *
+ * 曾经的做法是写成 TS 函数、用 rdkitOps.toString() 注入 WebView。那在 node 和 dev 构建下
+ * 都能跑，但 release 构建把 JS 编译成 Hermes 字节码后，toString() 返回的是
+ * `function rdkitOps(...) { [bytecode] }`——注进去就是 ReferenceError: bytecode is not defined。
+ * 测试跑在 node 上，永远抓不到这个问题。
+ *
+ * 现在两边都加载这一个文件：WebView 用 <script src>，node 用 fs 读进来。
+ * 没有副本，就不会漂移；没有 toString，就不受字节码影响。
+ *
+ * 扩展名是 .js.txt 因为 metro 不把 .js 当资源打包，改成 txt 才能作为文件取到源码。
+ *
+ * 每个 JSMol 用完都要 delete()：WASM 堆不归 JS GC 管，漏了就一直涨。
+ */
+
+function rdkitOps(RDKit, op, args) {
+  function withMol(smiles, use) {
+    var mol = RDKit.get_mol(smiles);
+    if (!mol) return null;
+    if (!mol.is_valid()) {
+      mol.delete();
+      return null;
+    }
+    try {
+      return use(mol);
+    } finally {
+      mol.delete();
+    }
+  }
+
+  /** 反应写成 A.B>>C；按 >> 和 . 拆成分子，两侧分别处理。 */
+  function split(input) {
+    if (input.indexOf(">>") !== -1) {
+      var halves = input.split(">>");
+      return {
+        left: halves[0].split(".").filter(Boolean),
+        right: (halves[1] || "").split(".").filter(Boolean),
+        isReaction: true,
+      };
+    }
+    return { left: input.split(".").filter(Boolean), right: [], isReaction: false };
+  }
+
+  function describe(smiles) {
+    return withMol(smiles, function (mol) {
+      var descriptors = JSON.parse(mol.get_descriptors());
+      var inchi = mol.get_inchi();
+      return {
+        input: smiles,
+        canonical: mol.get_smiles(),
+        inchi: inchi,
+        inchi_key: RDKit.get_inchikey_for_inchi(inchi),
+        molecular_weight: descriptors.amw,
+        exact_mass: descriptors.exactmw,
+        heavy_atoms: descriptors.NumHeavyAtoms,
+        rings: descriptors.NumRings,
+        rotatable_bonds: descriptors.NumRotatableBonds,
+        tpsa: descriptors.tpsa,
+        logp: descriptors.CrippenClogP,
+      };
+    });
+  }
+
+  if (op === "version") {
+    return { ok: true, version: RDKit.version() };
+  }
+
+  if (op === "standardize") {
+    var input = String(args.smiles == null ? "" : args.smiles).trim();
+    if (!input) return { ok: false, error: "SMILES 为空" };
+
+    var parts = split(input);
+    var all = parts.left.concat(parts.right);
+    var described = all.map(function (part) {
+      return { part: part, value: describe(part) };
+    });
+    var unreadable = described
+      .filter(function (entry) {
+        return entry.value === null;
+      })
+      .map(function (entry) {
+        return entry.part;
+      });
+
+    if (unreadable.length > 0) {
+      return {
+        ok: false,
+        error: "RDKit 读不出这些片段：" + unreadable.join("、"),
+        unreadable: unreadable,
+      };
+    }
+
+    var canonicalOf = function (list) {
+      return list
+        .map(function (part) {
+          return describe(part).canonical;
+        })
+        .join(".");
+    };
+
+    // 整体的 InChIKey：盐、共晶、溶剂合物在 SMILES 里用 "." 连接，按片段拆开算出来的
+    // key 对不上完整化合物（NaCN 会变成裸氰离子）。可得性匹配要用这个整体 key。
+    var whole = parts.isReaction ? null : describe(parts.left.join("."));
+
+    return {
+      ok: true,
+      is_reaction: parts.isReaction,
+      canonical: parts.isReaction
+        ? canonicalOf(parts.left) + ">>" + canonicalOf(parts.right)
+        : canonicalOf(parts.left),
+      inchi_key: whole ? whole.inchi_key : null,
+      molecular_weight: whole ? whole.molecular_weight : null,
+      heavy_atoms: whole ? whole.heavy_atoms : null,
+      components: described.map(function (entry) {
+        return entry.value;
+      }),
+    };
+  }
+
+  if (op === "depict") {
+    var target = String(args.smiles == null ? "" : args.smiles).trim();
+    if (!target) return { ok: false, error: "SMILES 为空" };
+    var width = Number(args.width) || 260;
+    var height = Number(args.height) || 200;
+
+    var pieces = split(target);
+    var render = function (smiles) {
+      return withMol(smiles, function (mol) {
+        mol.normalize_depiction(1);
+        // RDKit 会带一段 <?xml ...?> 声明。react-native-svg 的解析器只认元素，
+        // 前面多这一行就整张图都渲染不出来——从 <svg 开始截。
+        var svg = mol.get_svg(width, height);
+        var start = svg.indexOf("<svg");
+        return start === -1 ? svg : svg.slice(start);
+      });
+    };
+
+    var drawn = pieces.left.concat(pieces.right).map(function (part) {
+      return { part: part, svg: render(part) };
+    });
+    var failed = drawn
+      .filter(function (entry) {
+        return entry.svg === null;
+      })
+      .map(function (entry) {
+        return entry.part;
+      });
+    if (failed.length > 0) {
+      return { ok: false, error: "画不出这些片段：" + failed.join("、"), unreadable: failed };
+    }
+
+    var svgs = drawn.map(function (entry) {
+      return entry.svg;
+    });
+    if (!pieces.isReaction) {
+      return { ok: true, is_reaction: false, svgs: svgs };
+    }
+    return {
+      ok: true,
+      is_reaction: true,
+      reactants: svgs.slice(0, pieces.left.length),
+      products: svgs.slice(pieces.left.length),
+    };
+  }
+
+  if (op === "similarity") {
+    var a = String(args.a == null ? "" : args.a).trim();
+    var b = String(args.b == null ? "" : args.b).trim();
+    var fingerprint = function (smiles) {
+      return withMol(smiles, function (mol) {
+        return mol.get_morgan_fp();
+      });
+    };
+    var fpA = fingerprint(a);
+    var fpB = fingerprint(b);
+    if (fpA === null || fpB === null) {
+      return { ok: false, error: "RDKit 读不出 " + (fpA === null ? a : b) };
+    }
+
+    var both = 0;
+    var either = 0;
+    for (var i = 0; i < fpA.length; i += 1) {
+      var bitA = fpA[i] === "1";
+      var bitB = fpB[i] === "1";
+      if (bitA && bitB) both += 1;
+      if (bitA || bitB) either += 1;
+    }
+    return {
+      ok: true,
+      tanimoto: either === 0 ? 0 : Number((both / either).toFixed(4)),
+      note: "Morgan 指纹的 Tanimoto 相似度。相似不等于可以套用同一套条件。",
+    };
+  }
+
+  return { ok: false, error: "未知操作 " + op };
+}
+
+// node 里跑测试时用得上；WebView 里没有 module，跳过。
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { rdkitOps: rdkitOps };
+}
